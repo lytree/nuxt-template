@@ -4,7 +4,7 @@ import { appName } from '~/constants'
 useHead({
   title: appName,
 })
-var layout = "home";
+var layout = "default";
 </script>
 
 <template>
@@ -17,7 +17,7 @@ var layout = "home";
 html,
 body,
 #__nuxt {
-  height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
