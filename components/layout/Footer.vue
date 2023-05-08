@@ -1,5 +1,5 @@
 <template>
-  <dark-mode-container class="flex-center footer">
+  <dark-mode-container class="flex-center footer flex-shrink-0">
     <div text=" xl gray4" m-5 flex="~ gap3" justify-center>
       <NuxtLink i-carbon-campsite to="/" />
       <a i-carbon-logo-github href="https://github.com/antfu/vitesse-nuxt3" target="_blank" />
@@ -9,9 +9,8 @@
 </template>
 <style scoped>
 .footer {
-  position: fixed;
+  position: absolute;
   z-index: 999;
-  min-width: 1200px;
   height: 56px;
   padding-left: 36px;
   transition-duration: 300;
