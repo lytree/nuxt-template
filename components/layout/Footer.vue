@@ -1,11 +1,11 @@
 <template>
-  <dark-mode-container class="flex-center footer flex-shrink-0">
+  <common-dark-mode-container class="flex-center footer flex-shrink-0">
     <div text=" xl gray4" m-5 flex="~ gap3" justify-center>
       <NuxtLink i-carbon-campsite to="/" />
       <a i-carbon-logo-github href="https://github.com/antfu/vitesse-nuxt3" target="_blank" />
       <DarkToggle />
     </div>
-  </dark-mode-container>
+  </common-dark-mode-container>
 </template>
 <style scoped>
 .footer {

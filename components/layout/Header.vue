@@ -1,5 +1,5 @@
 <template>
-    <dark-mode-container class="flex items-center justify-between px-6 py-4 shadow-xl">
+    <common-dark-mode-container class="flex items-center justify-between px-6 py-4 shadow-xl">
         <div class="flex items-center">
             <button @click="isOpen = true" class="text-gray-500 focus:outline-none lg:hidden">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,13 +40,12 @@
                     <div v-show="dropdownOpen" class="absolute right-0 z-20 w-48 py-2 mt-2 rounded-md shadow-xl">
                         <a href="#" class="block px-4 py-2 text-sm">Profile</a>
                         <a href="#" class="block px-4 py-2 text-sm">Products</a>
-                        <router-link to="/" class="block px-4 py-2 text-sm ">Log
-                            out</router-link>
+                        <router-link to="/" class="block px-4 py-2 text-sm ">Log out</router-link>
                     </div>
                 </transition>
             </div>
         </div>
-    </dark-mode-container>
+    </common-dark-mode-container>
 </template>
   
 <script setup lang="ts">
