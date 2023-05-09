@@ -4,9 +4,8 @@
         <div :class="isOpen ? 'block' : 'hidden'" @click="isOpen = false"
             class="fixed inset-0 z-20 transition-opacity bg-black opacity-50 lg:hidden"></div>
         <!-- End Backdrop -->
-
         <div :class="isOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
-            class="fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-gray-900 lg:translate-x-0 lg:static lg:inset-0">
+            class="fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition-base lg:translate-x-0 lg:static lg:inset-0 light:bg-#f6f9f8 dark:bg-#18181c">
             <div class="flex items-center justify-center mt-2">
                 <div class="flex items-center">
                     <svg class="w-12 h-12" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,13 +17,12 @@
                             d="M201.694 387.105C231.686 417.098 280.312 417.098 310.305 387.105C325.301 372.109 332.8 352.456 332.8 332.8C332.8 313.144 325.301 293.491 310.305 278.495C295.309 263.498 288 256 275.2 230.4C256 243.2 243.201 320 243.201 345.6C201.694 345.6 179.2 332.8 179.2 332.8C179.2 352.456 186.698 372.109 201.694 387.105Z"
                             fill="white" />
                     </svg>
-
-                    <span class="mx-2 text-2xl font-semibold text-white">Dashboard</span>
+                    <span class="mx-2 text-2xl font-semibold ">Dashboard</span>
                 </div>
             </div>
 
-            <nav class="mt-10">
-                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
+            <nav class="mt-1">
+                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 "
                     :class="[$route.name === 'Dashboard' ? activeClass : inactiveClass]" to="/dashboard">
                     <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -37,7 +35,7 @@
                     <span class="mx-4">Dashboard</span>
                 </router-link>
 
-                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
+                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 "
                     :class="[$route.name === 'UIElements' ? activeClass : inactiveClass]" to="/ui-elements">
                     <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -57,7 +55,7 @@
                     <span class="mx-4">UI Elements</span>
                 </router-link>
 
-                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
+                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 "
                     :class="[$route.name === 'Tables' ? activeClass : inactiveClass]" to="/tables">
                     <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -74,7 +72,7 @@
                     <span class="mx-4">Tables</span>
                 </router-link>
 
-                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
+                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 "
                     :class="[$route.name === 'Forms' ? activeClass : inactiveClass]" to="/forms">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
@@ -86,7 +84,7 @@
                     <span class="mx-4">Forms</span>
                 </router-link>
 
-                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
+                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 "
                     :class="[$route.name === 'Cards' ? activeClass : inactiveClass]" to="/cards">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
@@ -98,7 +96,7 @@
                     <span class="mx-4">Cards</span>
                 </router-link>
 
-                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
+                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 "
                     :class="[$route.name === 'Modal' ? activeClass : inactiveClass]" to="/modal">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
@@ -109,7 +107,7 @@
                     <span class="mx-4">Modal</span>
                 </router-link>
 
-                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
+                <router-link class="flex items-center px-6 py-2 mt-4 duration-200 "
                     :class="[$route.name === 'Blank' ? activeClass : inactiveClass]" to="/blank">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path

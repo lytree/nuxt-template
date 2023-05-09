@@ -105,7 +105,7 @@ export default defineConfig({
       error_hover: 'rgb(var(--error-color-hover))',
       error_pressed: 'rgb(var(--error-color-pressed))',
       error_active: 'rgb(var(--error-color-active),0.1)',
-      dark: '#222'
+      dark: '#18181c'
     }
   }
 })
