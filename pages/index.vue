@@ -4,7 +4,6 @@ definePageMeta({
   middleware: [
     function (to, from) {
       if (to.path === '/') {
-        console.log(to.path)
         return navigateTo({ path: '/dashboard/' })
       }
     },
