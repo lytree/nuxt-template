@@ -8,7 +8,7 @@ watchEffect(() => {
 })
 
 definePageMeta({
-  layout: 'home',
+  layout: 'default',
 })
 </script>
 
@@ -27,7 +27,7 @@ definePageMeta({
         <span op-50>Also as known as:</span>
         <ul>
           <li v-for="otherName in user.otherNames" :key="otherName">
-            <router-link :to="`/hi/${otherName}`" replace>
+            <router-link :to="`/dashboard/${otherName}`" replace>
               {{ otherName }}
             </router-link>
           </li>

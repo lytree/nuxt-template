@@ -7,8 +7,8 @@
         <div :class="isOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
             class="fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition-base lg:translate-x-0 lg:static lg:inset-0 light:bg-#f6f9f8 dark:bg-#18181c">
             <div class="flex items-center justify-center mt-2">
-                <div class="flex items-center">
-                    <svg class="w-12 h-12" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="flex items-center py-1">
+                    <svg class="w-10 h-10" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M364.61 390.213C304.625 450.196 207.37 450.196 147.386 390.213C117.394 360.22 102.398 320.911 102.398 281.6C102.398 242.291 117.394 202.981 147.386 172.989C147.386 230.4 153.6 281.6 230.4 307.2C230.4 256 256 102.4 294.4 76.7999C320 128 334.618 142.997 364.608 172.989C394.601 202.981 409.597 242.291 409.597 281.6C409.597 320.911 394.601 360.22 364.61 390.213Z"
                             fill="#4C51BF" stroke="#4C51BF" stroke-width="2" stroke-linecap="round"
@@ -113,7 +113,6 @@
                         <path
                             d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                     </svg>
-
                     <span class="mx-4">Blank</span>
                 </router-link>
             </nav>
@@ -124,7 +123,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useSidebar } from "~/hooks/useSidebar";
-
+import "./index"
 const { isOpen } = useSidebar();
 const activeClass = ref(
     "bg-gray-600 bg-opacity-25 text-gray-100 border-gray-100"
@@ -132,6 +131,16 @@ const activeClass = ref(
 const inactiveClass = ref(
     "border-gray-900 text-gray-500 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-100"
 );
+
+const menus: Layout.Menu[] = [
+    {
+        name: "Dashboard",
+        path: "/Dashboard"
+    }, {
+        name: "Modal",
+        path: "/Modal"
+    }
+]
 
 </script>
 
