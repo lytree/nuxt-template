@@ -1,6 +1,6 @@
 <template>
-  <common-dark-mode-container class="absolute flex-center footer flex-shrink-0 lg:pl-256px">
-    <div text=" xl gray4" m-5 flex="~ gap3" justify-center>
+  <common-dark-mode-container class="absolute shadow-xl flex-center footer flex-shrink-0 lg:pl-64">
+    <div text="xl gray4" m-5 flex="~ gap3" class="justify-center">
       <NuxtLink i-carbon-campsite to="/" />
       <a i-carbon-logo-github href="https://github.com/antfu/vitesse-nuxt3" target="_blank" />
       <common-dark-toggle />
