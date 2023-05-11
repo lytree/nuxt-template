@@ -9,7 +9,9 @@ var layout = "default";
 
 <template>
   <NuxtLayout :name="layout">
-    <NuxtPage />
+    <NuxtPage>
+      <NuxtLoadingIndicator /> <!-- I'm here -->
+    </NuxtPage>
   </NuxtLayout>
 </template>
 

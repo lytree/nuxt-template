@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     // but missing on offline, disabling extraction it until fixed
     payloadExtraction: false,
     inlineSSRStyles: false,
-    renderJsonPayloads: true,
+    renderJsonPayloads: false,
   },
 
   css: [

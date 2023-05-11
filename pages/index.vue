@@ -1,10 +1,19 @@
 <script setup lang="ts">
 const online = useOnline()
+definePageMeta({
+  middleware: [
+    function (to, from) {
+      if (to.path === '/') {
+        console.log(to.path)
+        return navigateTo({ path: '/dashboard/' })
+      }
+    },
+  ],
+});
 </script>
 
 <template>
   <div>
-    <Logos mb-6 />
     <Suspense>
       <ClientOnly>
         <PageView v-if="online" />
@@ -18,6 +27,5 @@ const online = useOnline()
         </div>
       </template>
     </Suspense>
-    <InputEntry />
   </div>
 </template>
