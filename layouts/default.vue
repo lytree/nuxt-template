@@ -8,6 +8,5 @@
       </main>
       <LayoutFooter />
     </div>
-
   </div>
 </template>

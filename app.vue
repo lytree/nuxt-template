@@ -4,14 +4,12 @@ import { appName } from '~/constants'
 useHead({
   title: appName,
 })
-var layout = "default";
 </script>
 
 <template>
-  <NuxtLayout :name="layout">
-    <NuxtPage>
-      <NuxtLoadingIndicator /> <!-- I'm here -->
-    </NuxtPage>
+  <NuxtLayout >
+    <NuxtLoadingIndicator :height="5" :duration="3000" :throttle="400" /> <!-- I'm here -->
+    <NuxtPage />
   </NuxtLayout>
 </template>
 
