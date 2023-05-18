@@ -2,11 +2,11 @@
 const online = useOnline()
 definePageMeta({
   middleware: [
-    function (to, from) {
-      if (to.path === '/') {
-        return navigateTo({ path: '/dashboard/' })
-      }
-    },
+    // function (to, from) {
+    //   if (to.path === '/') {
+    //     return navigateTo({ path: '/dashboard/' })
+    //   }
+    // },
   ],
 });
 </script>

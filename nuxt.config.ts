@@ -2,16 +2,13 @@ import { appDescription } from './constants/index'
 
 export default defineNuxtConfig({
   modules: [
-    'nuxt-headlessui',
+    '@element-plus/nuxt',
     '@vueuse/nuxt',
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode'
   ],
-  // Optionally change the default prefix.
-  headlessui: {
-    prefix: 'Headless'
-  },
+  elementPlus: { /** Options */ },
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
@@ -23,7 +20,12 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
   ],
-
+  ssr: false,
+  router: {
+    options: {
+      hashMode: true
+    }
+  },
   colorMode: {
     classSuffix: '',
   },
@@ -44,10 +46,10 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        class: "h-full"
+        class: "h-full w-full"
       },
       bodyAttrs: {
-        class: "h-full"
+        class: "h-full w-full"
       },
       viewport: 'width=device-width,initial-scale=1',
       link: [
