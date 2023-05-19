@@ -8,7 +8,6 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
-import { presetDaisy } from 'unocss-preset-daisy'
 export default defineConfig({
   exclude: ['node_modules', 'dist', '.git', '.husky', '.vscode', 'public', 'build', 'mock', './stats.html'],
   shortcuts: {
@@ -49,14 +48,6 @@ export default defineConfig({
   },
   presets: [
     presetUno({ dark: 'class' }),
-    presetDaisy({
-      styled: false,
-      themes: false,
-      base: true,
-      utils: true,
-      rtl: false,
-      darkTheme: "dark",
-    }),
     presetAttributify(),
     presetIcons({
       scale: 1.2,

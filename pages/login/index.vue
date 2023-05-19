@@ -23,7 +23,7 @@
                                     </path>
                                 </svg>
                             </span>
-                            <input type="text" id="design-login-email"
+                            <el-input type="text" id="design-login-email"
                                 class=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                                 placeholder="用户名" />
                         </div>
@@ -39,17 +39,16 @@
                                     </path>
                                 </svg>
                             </span>
-                            <input type="password" id="design-login-password"
+                            <el-input type="password" id="design-login-password"
                                 class=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                                 placeholder="密码" />
                         </div>
                     </div>
-                    <button type="submit"
-                        class="btn  text-white  bg-black  hover:text-black hover:bg-white focus:outline-none focus:ring-2">
+                    <el-button>
                         <span class="w-full">
                             登录
                         </span>
-                    </button>
+                    </el-button>
                 </form>
             </div>
         </div>
