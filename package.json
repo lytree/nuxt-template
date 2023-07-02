@@ -24,7 +24,7 @@
     "@vueuse/nuxt": "^10.2.1",
     "consola": "^3.2.2",
     "element-plus": "^2.3.7",
-    "eslint": "^8.43.0",
+    "eslint": "^8.44.0",
     "nuxt": "^3.6.1",
     "pinia": "^2.1.4",
     "typescript": "^5.1.6",
