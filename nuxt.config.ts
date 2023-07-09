@@ -1,6 +1,7 @@
 import { appDescription } from './constants/index'
 
 export default defineNuxtConfig({
+  extends: ['./views/admin', './views/web'],
   //  #region 组件名自定义
   components: [
     { path: '~/components/common', prefix: 'l' },
@@ -26,7 +27,7 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
   ],
-  ssr: true,
+
   router: {
     options: {
       hashMode: false,
