@@ -8,6 +8,7 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
+
 export default defineConfig({
   exclude: ['node_modules', 'dist', '.git', '.husky', '.vscode', 'public', 'build', 'mock', './stats.html'],
   shortcuts: {
@@ -44,7 +45,7 @@ export default defineConfig({
     'fixed-center': 'fixed-lt flex-center wh-full',
     'nowrap-hidden': 'whitespace-nowrap overflow-hidden',
     'ellipsis-text': 'nowrap-hidden text-ellipsis',
-    'transition-base': 'transition-all duration-300 ease-in-out'
+    'transition-base': 'transition-all duration-300 ease-in-out',
   },
   presets: [
     presetUno({ dark: 'class' }),
@@ -96,7 +97,7 @@ export default defineConfig({
       error_hover: 'rgb(var(--error-color-hover))',
       error_pressed: 'rgb(var(--error-color-pressed))',
       error_active: 'rgb(var(--error-color-active),0.1)',
-      dark: '#18181c'
-    }
-  }
+      dark: '#18181c',
+    },
+  },
 })

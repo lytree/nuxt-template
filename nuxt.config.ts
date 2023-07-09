@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   //  #region 组件名自定义
   components: [
     { path: '~/components/common', prefix: 'l' },
-    '~/components'
+    '~/components',
   ],
   // #endregion
   modules: [
@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@unocss/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
   ],
   elementPlus: { /** Options */ },
   experimental: {
@@ -26,11 +26,11 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
   ],
-  ssr: false,
+  ssr: true,
   router: {
     options: {
-      hashMode: true
-    }
+      hashMode: false,
+    },
   },
   colorMode: {
     classSuffix: '',
@@ -52,10 +52,10 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        class: "h-full w-full"
+        class: 'h-full w-full',
       },
       bodyAttrs: {
-        class: "h-full w-full"
+        class: 'h-full w-full',
       },
       viewport: 'width=device-width,initial-scale=1',
       link: [

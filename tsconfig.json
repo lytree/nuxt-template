@@ -1,7 +1,10 @@
 {
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "strict": true,
-    "noImplicitAny": true
-  }
+    "extends": "./.nuxt/tsconfig.json",
+    "compilerOptions": {
+        "strict": true,
+        "noImplicitAny": true,
+        "target": "ES6",
+        //module 用来指定需要使用的模块化规范
+        "module": "es2015",
+    }
 }

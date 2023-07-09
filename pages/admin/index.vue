@@ -3,8 +3,8 @@ const online = useOnline()
 definePageMeta({
   middleware: [
     function (to, from) {
-      if (to.path === '/')
-        return navigateTo({ path: '/web/' })
+      if (to.path === '/admin')
+        return navigateTo({ path: '/admin/' })
     },
   ],
 })

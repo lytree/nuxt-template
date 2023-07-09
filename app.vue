@@ -7,10 +7,8 @@ useHead({
 </script>
 
 <template>
-  <NuxtLayout >
-    <NuxtLoadingIndicator :height="5" :duration="3000" :throttle="400" /> <!-- I'm here -->
-    <NuxtPage />
-  </NuxtLayout>
+  <NuxtLoadingIndicator :height="5" :duration="3000" :throttle="400" /> <!-- I'm here -->
+  <NuxtPage />
 </template>
 
 <style>
