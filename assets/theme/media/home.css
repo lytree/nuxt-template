@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* 页面宽度小于768px
+------------------------------- */
+@media screen and (max-width: 768px) {
+
+    .home-media,
+    .home-media-sm {
+        margin-top: 15px;
+    }
+}
+
+/* 页面宽度小于1200px
+------------------------------- */
+@media screen and (max-width: 1200px) {
+    .home-media-lg {
+        margin-top: 15px;
+    }
+
+    .home-monitor .flex-warp-item {
+        width: 33.33% !important;
+    }
+}

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/* 多行文本溢出
+  ------------------------------- */
+/* 页面宽度小于576px
+------------------------------- */
+@media screen and (max-width: 576px) {
+    .el-message-box {
+        width: 80% !important;
+    }
+
+    .layout-lock-screen-date-top {
+        display: none;
+    }
+
+    .layout-navbars-breadcrumb-user-link-name {
+        max-width: 42px;
+        overflow: hidden;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+}
+
+/* 页面宽度小于768px
+------------------------------- */
+@media screen and (max-width: 768px) {
+    .layout-navbars-breadcrumb-hide {
+        display: none;
+    }
+
+    .layout-view-link a {
+        max-width: 80%;
+        text-align: center;
+    }
+
+    .layout-search-dialog .el-autocomplete {
+        width: 80% !important;
+    }
+}
+
+/* 页面宽度小于1000px
+------------------------------- */
+@media screen and (max-width: 1000px) {
+    .layout-drawer-content-flex {
+        position: relative;
+    }
+
+    .layout-drawer-content-flex::after {
+        content: "手机版不支持切换布局";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        text-align: center;
+        height: 140px;
+        line-height: 140px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #666666;
+    }
+
+    .table-footer-tool {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .splitpanes__pane {
+        height: auto !important;
+    }
+
+    .splitpanes__splitter {
+        display: none !important;
+    }
+}

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { appName } from '~/constants'
+import '@/assets/theme/index.css'
 
 useHead({
   title: appName,

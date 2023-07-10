@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/* 页面宽度小于576px
+------------------------------- */
+@media screen and (max-width: 576px) {
+
+    .el-pager,
+    .el-pagination__jump {
+        display: none !important;
+    }
+
+    .el-pagination,
+    .table-footer {
+        justify-content: center !important;
+    }
+}
