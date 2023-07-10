@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-definePageMeta({
-  layout: 'home',
-})
 </script>
 
 <template>
@@ -11,7 +8,7 @@ definePageMeta({
     </div>
     <div class="w-full flex flex-col md:w-2/5">
       <div class="flex justify-center pt-12 md:justify-end md:pl-12 md:-mb-24">
-        <common-dark-toggle class="p-4" />
+        <l-dark-toggle class="p-4" />
       </div>
       <div class="my-auto flex flex-col justify-center px-8 pt-8 md:justify-start lg:px-32 md:px-24 md:pt-0">
         <p class="text-center text-3xl">
