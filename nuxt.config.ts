@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
+
   ],
   elementPlus: { /** Options */ },
   experimental: {

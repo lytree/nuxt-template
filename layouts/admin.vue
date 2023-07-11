@@ -1,12 +1,77 @@
+<script setup lang="ts" name="layoutDefaults">
+import { defineAsyncComponent, nextTick, onMounted, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { storeToRefs } from 'pinia'
+import { useThemeConfig } from '@/stores/themeConfig'
+import { NextLoading } from '@/utils/loading'
+
+// 引入组件
+const LayoutAside = defineAsyncComponent(() => import('@/layout/admin/aside.vue'))
+const LayoutHeader = defineAsyncComponent(() => import('@/layout/admin/header.vue'))
+const LayoutMain = defineAsyncComponent(() => import('@/layout/admin/main.vue'))
+
+// 定义变量内容
+const layoutScrollbarRef = ref<RefType>('')
+const layoutMainRef = ref<InstanceType<typeof LayoutMain>>()
+const route = useRoute()
+const storesThemeConfig = useThemeConfig()
+const { themeConfig } = storeToRefs(storesThemeConfig)
+
+// 重置滚动条高度
+function updateScrollbar() {
+  // 更新父级 scrollbar
+  layoutScrollbarRef.value?.update()
+  // 更新子级 scrollbar
+  layoutMainRef.value?.layoutMainScrollbarRef.update()
+}
+// 重置滚动条高度，由于组件是异步引入的
+function initScrollBarHeight() {
+  nextTick(() => {
+    setTimeout(() => {
+      updateScrollbar()
+      if (layoutScrollbarRef.value)
+        layoutScrollbarRef.value.wrapRef.scrollTop = 0
+      if (layoutMainRef.value)
+        layoutMainRef.value!.layoutMainScrollbarRef.wrapRef.scrollTop = 0
+    }, 500)
+  })
+}
+// 页面加载时
+onMounted(() => {
+  initScrollBarHeight()
+  NextLoading.done(600)
+})
+// 监听路由的变化，切换界面时，滚动条置顶
+watch(
+  () => route.path,
+  () => {
+    initScrollBarHeight()
+  },
+)
+// 监听 themeConfig 配置文件的变化，更新菜单 el-scrollbar 的高度
+watch(
+  () => [themeConfig.value.isTagsview, themeConfig.value.isFixedHeader],
+  () => {
+    nextTick(() => {
+      updateScrollbar()
+    })
+  },
+  {
+    deep: true,
+  },
+)
+</script>
+
 <template>
-  <div class="font-roboto h-screen min-h-full flex">
-    <LayoutSidebar />
-    <div class="flex flex-col flex-1 overflow-hidden">
-      <LayoutHeader />
-      <main class="px-10px text-center">
-        <slot />
-      </main>
-      <LayoutFooter />
-    </div>
-  </div>
+  <el-container class="layout-container">
+    <LayoutAside />
+    <el-container class="layout-container-view h100">
+      <el-scrollbar ref="layoutScrollbarRef" class="layout-backtop">
+        <LayoutHeader />
+        <LayoutMain ref="layoutMainRef">
+          <slot />
+        </LayoutMain>
+      </el-scrollbar>
+    </el-container>
+  </el-container>
 </template>

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { computed, defineAsyncComponent, onBeforeMount, reactive, ref, watch } from 'vue'
 import { storeToRefs } from 'pinia'
-import { useRoutesList } from '/@/stores/routesList'
-import { useThemeConfig } from '/@/stores/themeConfig'
-import { useTagsViewRoutes } from '/@/stores/tagsViewRoutes'
-import mittBus from '/@/utils/mitt'
+import { useRoutesList } from '@/stores/routesList'
+import { useThemeConfig } from '@/stores/themeConfig'
+import { useTagsViewRoutes } from '@/stores/tagsViewRoutes'
+import mittBus from '@/utils/mitt'
 
 // 引入组件
-const Logo = defineAsyncComponent(() => import('/@/layout/logo/index.vue'))
-const Vertical = defineAsyncComponent(() => import('/@/layout/navMenu/vertical.vue'))
+const Logo = defineAsyncComponent(() => import('@/layout/admin/logo/index.vue'))
+const Vertical = defineAsyncComponent(() => import('@/layout/admin/navMenu/vertical.vue'))
 
 // 定义变量内容
 const layoutAsideScrollbarRef = ref()
