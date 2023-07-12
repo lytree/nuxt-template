@@ -18,9 +18,12 @@ export default defineNuxtConfig({
   i18n: {
     /* module options */
     lazy: true,
-    langDir: './i18/lang',
-    locales: [{ code: 'en', file: 'en.ts' }],
+    langDir: './i18n/lang',
+    locales: [{ code: 'en', file: 'en.ts' }, { code: 'zh', file: 'zh-cn.ts' }],
 
+  },
+  routeRules: {
+    'en/admin/**': { ssr: false },
   },
   elementPlus: { /** Options */ },
   experimental: {

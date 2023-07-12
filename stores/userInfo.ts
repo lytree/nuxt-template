@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { merge } from 'lodash-es'
-import { AuthApi } from '@/server/api/admin/Auth'
+// import { AuthApi } from '@/server/api/admin/Auth'
 import { Local } from '@/utils/storage'
 
 // import { Session } from '/@/utils/storage'
@@ -55,28 +55,28 @@ export const useUserInfo = defineStore('userInfo', {
     // 查询用户信息
     async getApiUserInfo() {
       return new Promise((resolve, reject) => {
-        new AuthApi()
-          .getUserPermissions()
-          .then((res) => {
-            if (res?.success) {
-              const user = res.data?.user
-              const userInfos = {
-                userName: user?.nickName || user?.name,
-                photo: user?.avatar ? user?.avatar : '',
-                time: new Date().getTime(),
-                roles: [],
-                authBtnList: res.data?.permissions,
-              }
-              // Session.set('userInfo', userInfos)
-              resolve(userInfos)
-            }
-            else {
-              this.clear()
-            }
-          })
-          .catch((err) => {
-            reject(err)
-          })
+        // new AuthApi()
+        //   .getUserPermissions()
+        //   .then((res) => {
+        //     if (res?.success) {
+        //       const user = res.data?.user
+        //       const userInfos = {
+        //         userName: user?.nickName || user?.name,
+        //         photo: user?.avatar ? user?.avatar : '',
+        //         time: new Date().getTime(),
+        //         roles: [],
+        //         authBtnList: res.data?.permissions,
+        //       }
+        //       // Session.set('userInfo', userInfos)
+        //       resolve(userInfos)
+        //     }
+        //     else {
+        //       this.clear()
+        //     }
+        //   })
+        //   .catch((err) => {
+        //     reject(err)
+        //   })
       })
     },
   },

@@ -34,30 +34,29 @@ onMounted(() => {
 })
 </script>
 
-<style scoped lang="scss">
-.login-scan-animation {
+<style scoped>
+.login-scan-animation, .login-scan-container .login-msg, .login-scan-container {
   opacity: 0;
   animation-name: error-num;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
+
 .login-scan-container {
   padding: 0 20px 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  @extend .login-scan-animation;
   animation-delay: 0.1s;
-  :deep(img) {
-    margin: auto;
-  }
-  .login-msg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--el-text-color-placeholder);
-    @extend .login-scan-animation;
-    animation-delay: 0.2s;
-  }
+}
+.login-scan-container :deep(img) {
+  margin: auto;
+}
+.login-scan-container .login-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--el-text-color-placeholder);
+  animation-delay: 0.2s;
 }
 </style>

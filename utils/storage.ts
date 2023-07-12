@@ -9,8 +9,9 @@ import Cookies from 'js-cookie'
  */
 export const Local = {
   getKey(key: string) {
-    // @ts-ignore
-    return `${__NEXT_NAME__}:${key}`
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    return `web:${key}`
   },
   // 设置永久缓存
   set(key: string, val: any) {
@@ -18,7 +19,7 @@ export const Local = {
   },
   // 获取永久缓存
   get(key: string) {
-    let json = <string>window.localStorage.getItem(Local.getKey(key))
+    const json = <string>window.localStorage.getItem(Local.getKey(key))
     return JSON.parse(json)
   },
   // 移除永久缓存
@@ -41,18 +42,21 @@ export const Local = {
 export const Session = {
   // 设置临时缓存
   set(key: string, val: any) {
-    if (key === 'token') return Cookies.set(key, val)
+    if (key === 'token')
+      return Cookies.set(key, val)
     window.sessionStorage.setItem(Local.getKey(key), JSON.stringify(val))
   },
   // 获取临时缓存
   get(key: string) {
-    if (key === 'token') return Cookies.get(key)
-    let json = <string>window.sessionStorage.getItem(Local.getKey(key))
+    if (key === 'token')
+      return Cookies.get(key)
+    const json = <string>window.sessionStorage.getItem(Local.getKey(key))
     return JSON.parse(json)
   },
   // 移除临时缓存
   remove(key: string) {
-    if (key === 'token') return Cookies.remove(key)
+    if (key === 'token')
+      return Cookies.remove(key)
     window.sessionStorage.removeItem(Local.getKey(key))
   },
   // 移除全部临时缓存

@@ -68,9 +68,9 @@ watch(
     <el-container class="layout-container-view h100">
       <el-scrollbar ref="layoutScrollbarRef" class="layout-backtop">
         <LayoutHeader />
-        <LayoutMain ref="layoutMainRef">
+        <!-- <LayoutMain ref="layoutMainRef">
           <slot />
-        </LayoutMain>
+        </LayoutMain> -->
       </el-scrollbar>
     </el-container>
   </el-container>
