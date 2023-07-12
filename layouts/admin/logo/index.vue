@@ -37,7 +37,7 @@ function onThemeConfigChange() {
   </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .layout-logo {
   width: 220px;
   height: 50px;

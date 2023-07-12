@@ -7,8 +7,8 @@ import { useTagsViewRoutes } from '@/stores/tagsViewRoutes'
 import mittBus from '@/utils/mitt'
 
 // 引入组件
-const Logo = defineAsyncComponent(() => import('@/layout/admin/logo/index.vue'))
-const Vertical = defineAsyncComponent(() => import('@/layout/admin/navMenu/vertical.vue'))
+const Logo = defineAsyncComponent(() => import('@/layouts/admin/logo/index.vue'))
+const Vertical = defineAsyncComponent(() => import('@/layouts/admin/navMenu/vertical.vue'))
 
 // 定义变量内容
 const layoutAsideScrollbarRef = ref()

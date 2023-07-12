@@ -1,4 +1,4 @@
-<el-scrollbar setup lang="ts">
+<script setup lang="ts">
 import { computed, defineAsyncComponent, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { storeToRefs } from 'pinia'
@@ -7,8 +7,8 @@ import { useThemeConfig } from '@/stores/themeConfig'
 import { NextLoading } from '@/utils/loading'
 
 // 引入组件
-const LayoutParentView = defineAsyncComponent(() => import('@/layout/admin/routerView/parent.vue'))
-const LayoutFooter = defineAsyncComponent(() => import('@/layout/admin/footer/index.vue'))
+const LayoutParentView = defineAsyncComponent(() => import('@/layouts/admin/routerView/parent.vue'))
+const LayoutFooter = defineAsyncComponent(() => import('@/layouts/admin/footer/index.vue'))
 
 // 定义变量内容
 const layoutMainScrollbarRef = ref()

@@ -4,7 +4,7 @@ import { storeToRefs } from 'pinia'
 import { useTagsViewRoutes } from '@/stores/tagsViewRoutes'
 
 // 引入组件
-const NavBarsIndex = defineAsyncComponent(() => import('@/layout/navBars/index.vue'))
+const NavBarsIndex = defineAsyncComponent(() => import('@/layouts/admin/navBars/index.vue'))
 
 // 定义变量内容
 const storesTagsViewRoutes = useTagsViewRoutes()

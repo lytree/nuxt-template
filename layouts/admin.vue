@@ -6,9 +6,9 @@ import { useThemeConfig } from '@/stores/themeConfig'
 import { NextLoading } from '@/utils/loading'
 
 // 引入组件
-const LayoutAside = defineAsyncComponent(() => import('@/layout/admin/aside.vue'))
-const LayoutHeader = defineAsyncComponent(() => import('@/layout/admin/header.vue'))
-const LayoutMain = defineAsyncComponent(() => import('@/layout/admin/main.vue'))
+const LayoutAside = defineAsyncComponent(() => import('@/layouts/admin/aside.vue'))
+const LayoutHeader = defineAsyncComponent(() => import('@/layouts/admin/header.vue'))
+const LayoutMain = defineAsyncComponent(() => import('@/layouts/admin/main.vue'))
 
 // 定义变量内容
 const layoutScrollbarRef = ref<RefType>('')

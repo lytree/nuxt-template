@@ -38,7 +38,7 @@ import other from '@/utils/other'
 import mittBus from '@/utils/mitt'
 
 // 引入组件
-const SubItem = defineAsyncComponent(() => import('@/layout/admin/navMenu/subItem.vue'))
+const SubItem = defineAsyncComponent(() => import('@/layouts/admin/navMenu/subItem.vue'))
 
 // 定义父组件传过来的值
 const props = defineProps({
@@ -118,7 +118,7 @@ onBeforeRouteUpdate((to) => {
 })
 </script>
 
-<style scoped lang="scss">
+<style scoped >
 .el-menu-horizontal-warp {
   flex: 1;
   overflow: hidden;

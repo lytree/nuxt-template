@@ -49,7 +49,7 @@ watch(
 )
 </script>
 
-<style scoped lang="scss">
+<style scoped >
 .layout-link-container {
   .layout-link-warp {
     margin: auto;

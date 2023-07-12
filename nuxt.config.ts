@@ -13,8 +13,15 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
-
+    '@nuxtjs/i18n',
   ],
+  i18n: {
+    /* module options */
+    lazy: true,
+    langDir: './i18/lang',
+    locales: [{ code: 'en', file: 'en.ts' }],
+
+  },
   elementPlus: { /** Options */ },
   experimental: {
     // when using generate, payload js assets included in sw precache manifest

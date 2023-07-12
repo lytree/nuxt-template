@@ -8,7 +8,7 @@ import { Session } from '@/utils/storage'
 import mittBus from '@/utils/mitt'
 
 // 引入组件
-const Iframes = defineAsyncComponent(() => import('@/layout/routerView/iframes.vue'))
+const Iframes = defineAsyncComponent(() => import('@/layouts/admin/routerView/iframes.vue'))
 
 // 定义变量内容
 const route = useRoute()
