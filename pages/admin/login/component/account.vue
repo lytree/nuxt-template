@@ -83,15 +83,15 @@ import { useI18n } from 'vue-i18n'
 // import { storeToRefs } from 'pinia'
 // import { useThemeConfig } from '/@/stores/themeConfig'
 // import { initFrontEndControlRoutes } from '/@/router/frontEnd'
-import { initBackEndControlRoutes } from '/@/router/backEnd'
-import { Session } from '/@/utils/storage'
-import { formatAxis } from '/@/utils/formatTime'
-import { NextLoading } from '/@/utils/loading'
-import { AuthApi } from '/@/api/admin/Auth'
-import { AuthLoginInput } from '/@/api/admin/data-contracts'
-import { useUserInfo } from '/@/stores/userInfo'
+import { initBackEndControlRoutes } from '@/router/backEnd'
+import { Session } from '@/utils/storage'
+import { formatAxis } from '@/utils/formatTime'
+import { NextLoading } from '@/utils/loading'
+import { AuthApi } from '@/api/admin/Auth'
+import { AuthLoginInput } from '@/server/api/admin/data-contracts'
+import { useUserInfo } from '@/stores/userInfo'
 
-const MyCaptchaDialog = defineAsyncComponent(() => import('/@/components/my-captcha/dialog.vue'))
+const MyCaptchaDialog = defineAsyncComponent(() => import('@/components/my-captcha/dialog.vue'))
 
 // 定义变量内容
 const { t } = useI18n()
@@ -213,28 +213,28 @@ const signInSuccess = (isNoPower: boolean | undefined) => {
   animation-name: error-num;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  animation-delay: calc($i/10)s;
+  animation-delay: calc(1/10)s;
 }
 .login-content-form .login-animation2 {
   opacity: 0;
   animation-name: error-num;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  animation-delay: calc($i/10)s;
+  animation-delay: calc(2/10)s;
 }
 .login-content-form .login-animation3 {
   opacity: 0;
   animation-name: error-num;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  animation-delay: calc($i/10)s;
+  animation-delay: calc(3/10)s;
 }
 .login-content-form .login-animation4 {
   opacity: 0;
   animation-name: error-num;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  animation-delay: calc($i/10)s;
+  animation-delay: calc(4/10)s;
 }
 .login-content-form .login-content-password {
   display: inline-block;

@@ -1,8 +1,8 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
 import { ElMessage, ElMessageBox } from 'element-plus'
-import { Session, Local } from '/@/utils/storage'
+import { Session, Local } from '@/utils/storage'
 import qs from 'qs'
-import { adminTokenKey } from '/@/stores/userInfo'
+import { adminTokenKey } from '@/stores/userInfo'
 
 // 配置新建一个 axios 实例
 const service: AxiosInstance = axios.create({

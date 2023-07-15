@@ -64,6 +64,6 @@ defineExpose({
       <LayoutFooter v-if="isFooter" />
     </el-scrollbar>
 
-    <el-backtop :target="setBacktopClass" right="15" />
+    <el-backtop :target="setBacktopClass" :right="15" />
   </el-main>
 </template>

@@ -1,11 +1,11 @@
 <script setup lang="ts" name="loginIndex">
 import { computed, defineAsyncComponent, onMounted, reactive } from 'vue'
 import { storeToRefs } from 'pinia'
-import { useThemeConfig } from '/@/stores/themeConfig'
-import { NextLoading } from '/@/utils/loading'
-import logoMini from '/@/assets/logo-mini.svg'
-import loginMain from '/@/assets/login-main.svg'
-import loginBg from '/@/assets/login-bg.svg'
+import { useThemeConfig } from '@/stores/themeConfig'
+import { NextLoading } from '@/utils/loading'
+import logoMini from '@/assets/logo-mini.svg'
+import loginMain from '@/assets/login-main.svg'
+import loginBg from '@/assets/login-bg.svg'
 
 // 引入组件
 const Account = defineAsyncComponent(() => import('./component/account.vue'))

@@ -4,7 +4,8 @@ definePageMeta({
   middleware: [
     function (to, from) {
       if (to.path === '/')
-        return navigateTo({ path: '/web' })
+
+        return navigateTo({ path: '/en/web' })
     },
   ],
 })

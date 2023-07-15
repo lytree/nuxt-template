@@ -65,12 +65,12 @@ watch(
 <template>
   <el-container class="layout-container">
     <LayoutAside />
-    <el-container class="layout-container-view h100">
+    <el-container class="layout-container-view h-full">
       <el-scrollbar ref="layoutScrollbarRef" class="layout-backtop">
         <LayoutHeader />
-        <!-- <LayoutMain ref="layoutMainRef">
+        <LayoutMain ref="layoutMainRef">
           <slot />
-        </LayoutMain> -->
+        </LayoutMain>
       </el-scrollbar>
     </el-container>
   </el-container>

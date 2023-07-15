@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isShowBreadcrumb" class="layout-navbars-breadcrumb">
+  <div class="layout-navbars-breadcrumb">
     <SvgIcon
       class="layout-navbars-breadcrumb-icon"
       :name="themeConfig.isCollapse ? 'ele-Expand' : 'ele-Fold'"
@@ -46,13 +46,13 @@ const state = reactive<BreadcrumbState>({
   routeSplitIndex: 1,
 })
 
-// 动态设置经典、横向布局不显示
-const isShowBreadcrumb = computed(() => {
-  initRouteSplit(route.path)
-  const { layout, isBreadcrumb } = themeConfig.value
-  if (layout === 'classic' || layout === 'transverse') return false
-  else return isBreadcrumb ? true : false
-})
+// // 动态设置经典、横向布局不显示
+// const isShowBreadcrumb = computed(() => {
+//   initRouteSplit(route.path)
+//   const { layout, isBreadcrumb } = themeConfig.value
+//   if (layout === 'classic' || layout === 'transverse') return false
+//   else return isBreadcrumb ? true : false
+// })
 // 面包屑点击时
 const onBreadcrumbClick = (v: RouteItem) => {
   const { redirect, path } = v
@@ -111,36 +111,36 @@ onBeforeRouteUpdate((to) => {
   height: inherit;
   display: flex;
   align-items: center;
-  .layout-navbars-breadcrumb-icon {
-    cursor: pointer;
-    font-size: 18px;
-    color: var(--next-bg-topBarColor);
-    height: 100%;
-    width: 40px;
-    opacity: 0.8;
-    &:hover {
-      opacity: 1;
-    }
-  }
-  .layout-navbars-breadcrumb-span {
-    display: flex;
-    opacity: 0.7;
-    color: var(--next-bg-topBarColor);
-  }
-  .layout-navbars-breadcrumb-iconfont {
-    font-size: 14px;
-    margin-right: 5px;
-  }
-  :deep(.el-breadcrumb__separator) {
-    opacity: 0.7;
-    color: var(--next-bg-topBarColor);
-  }
-  :deep(.el-breadcrumb__inner a, .el-breadcrumb__inner.is-link) {
-    font-weight: unset !important;
-    color: var(--next-bg-topBarColor);
-    &:hover {
-      color: var(--el-color-primary) !important;
-    }
-  }
+}
+.layout-navbars-breadcrumb .layout-navbars-breadcrumb-icon {
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--next-bg-topBarColor);
+  height: 100%;
+  width: 40px;
+  opacity: 0.8;
+}
+.layout-navbars-breadcrumb .layout-navbars-breadcrumb-icon:hover {
+  opacity: 1;
+}
+.layout-navbars-breadcrumb .layout-navbars-breadcrumb-span {
+  display: flex;
+  opacity: 0.7;
+  color: var(--next-bg-topBarColor);
+}
+.layout-navbars-breadcrumb .layout-navbars-breadcrumb-iconfont {
+  font-size: 14px;
+  margin-right: 5px;
+}
+.layout-navbars-breadcrumb :deep(.el-breadcrumb__separator) {
+  opacity: 0.7;
+  color: var(--next-bg-topBarColor);
+}
+.layout-navbars-breadcrumb :deep(.el-breadcrumb__inner a, .el-breadcrumb__inner.is-link) {
+  font-weight: unset !important;
+  color: var(--next-bg-topBarColor);
+}
+.layout-navbars-breadcrumb :deep(.el-breadcrumb__inner a, .el-breadcrumb__inner.is-link):hover {
+  color: var(--el-color-primary) !important;
 }
 </style>

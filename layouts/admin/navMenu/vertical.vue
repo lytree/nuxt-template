@@ -59,13 +59,9 @@ const state = reactive({
 })
 
 // 获取父级菜单数据
-const menuLists = computed(() => {
-  return <RouteItems>props.menuList
-})
+const menuLists = computed(() =>  <RouteItems>props.menuList)
 // 获取布局配置信息
-const getThemeConfig = computed(() => {
-  return themeConfig.value
-})
+const getThemeConfig = computed(() => themeConfig.value)
 // 菜单高亮（详情时，父级高亮）
 const setParentHighlight = (currentRoute: RouteToFrom) => {
   const { path, meta } = currentRoute

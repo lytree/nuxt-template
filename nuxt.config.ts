@@ -15,17 +15,24 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
   ],
+  pinia: {
+    autoImports: [
+      // automatically imports `defineStore`
+      'defineStore', // import { defineStore } from 'pinia'
+      ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
+    ],
+  },
   i18n: {
-    /* module options */
-    lazy: true,
-    langDir: './i18n/lang',
-    locales: [{ code: 'en', file: 'en.ts' }, { code: 'zh', file: 'zh-cn.ts' }],
-
+    vueI18n: './i18n/index.ts', // if you are using custom path, default
   },
   routeRules: {
-    'en/admin/**': { ssr: false },
+    '/admin/**': { ssr: false },
   },
-  elementPlus: { /** Options */ },
+  elementPlus: {
+    icon: 'ElIcon',
+    importStyle: 'css',
+    themes: ['dark'],
+  },
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
@@ -46,7 +53,6 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
-
   nitro: {
     esbuild: {
       options: {
@@ -57,6 +63,13 @@ export default defineNuxtConfig({
       crawlLinks: false,
       routes: ['/'],
       ignore: ['/hi'],
+    },
+    devProxy: {
+      '/gitee': {
+        target: 'https://gitee.com', // 这里是接口地址
+        changeOrigin: true,
+        prependPath: true,
+      },
     },
   },
 

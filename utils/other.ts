@@ -2,6 +2,7 @@ import { defineAsyncComponent, nextTick } from 'vue'
 import type { App } from 'vue'
 import * as svg from '@element-plus/icons-vue'
 import { storeToRefs } from 'pinia'
+import type { NuxtApp } from 'nuxt/app'
 import { useThemeConfig } from '@/stores/themeConfig'
 import { Local } from '@/utils/storage'
 import { verifyUrl } from '@/utils/toolsValidate'
@@ -14,12 +15,12 @@ const SvgIcon = defineAsyncComponent(() => import('@/components/svgIcon/index.vu
  * @param app vue 实例
  * @description 使用：https://element-plus.gitee.io/zh-CN/component/icon.html
  */
-export function elSvg(app: App) {
+export function elSvg(app: NuxtApp) {
   const icons = svg as any
   for (const i in icons)
-    app.component(`ele-${icons[i].name}`, icons[i])
+    app.vueApp.component(`ele-${icons[i].name}`, icons[i])
 
-  app.component('SvgIcon', SvgIcon)
+  app.vueApp.component('SvgIcon', SvgIcon)
 }
 
 /**
@@ -192,7 +193,7 @@ export function handleOpenLink(val: RouteItem) {
  * @method handleOpenLink 打开外部链接
  */
 const other = {
-  elSvg: (app: App) => {
+  elSvg: (app: NuxtApp) => {
     elSvg(app)
   },
   useTitle: () => {

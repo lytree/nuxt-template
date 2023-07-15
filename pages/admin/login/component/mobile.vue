@@ -41,17 +41,17 @@
 import { reactive, defineAsyncComponent, ref, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
-import { testMobile } from '/@/utils/test'
-import { AuthApi } from '/@/api/admin/Auth'
-import { AuthMobileLoginInput } from '/@/api/admin/data-contracts'
-import { useUserInfo } from '/@/stores/userInfo'
-import { initBackEndControlRoutes } from '/@/router/backEnd'
-import { Session } from '/@/utils/storage'
-import { NextLoading } from '/@/utils/loading'
+import { testMobile } from '@/utils/test'
+import { AuthApi } from '@/api/admin/Auth'
+import { AuthMobileLoginInput } from '@/api/admin/data-contracts'
+import { useUserInfo } from '@/stores/userInfo'
+import { initBackEndControlRoutes } from '@/router/backEnd'
+import { Session } from '@/utils/storage'
+import { NextLoading } from '@/utils/loading'
 import { useI18n } from 'vue-i18n'
-import { formatAxis } from '/@/utils/formatTime'
+import { formatAxis } from '@/utils/formatTime'
 
-const MyInputCode = defineAsyncComponent(() => import('/@/components/my-input-code/index.vue'))
+const MyInputCode = defineAsyncComponent(() => import('@/components/my-input-code/index.vue'))
 
 const { t } = useI18n()
 const route = useRoute()
@@ -153,28 +153,28 @@ const signInSuccess = (isNoPower: boolean | undefined) => {
   animation-name: error-num;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  animation-delay: calc($i/10)s;
+  animation-delay: calc(1/10)s;
 }
 .login-content-form .login-animation2 {
   opacity: 0;
   animation-name: error-num;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  animation-delay: calc($i/10)s;
+  animation-delay: calc(2/10)s;
 }
 .login-content-form .login-animation3 {
   opacity: 0;
   animation-name: error-num;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  animation-delay: calc($i/10)s;
+  animation-delay: calc(3/10)s;
 }
 .login-content-form .login-animation4 {
   opacity: 0;
   animation-name: error-num;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  animation-delay: calc($i/10)s;
+  animation-delay: calc(4/10)s;
 }
 .login-content-form .login-content-code {
   width: 100%;

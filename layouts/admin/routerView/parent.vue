@@ -93,12 +93,12 @@ watch(
     <router-view v-slot="{ Component }">
       <transition :name="setTransitionName" mode="out-in">
         <keep-alive :include="getKeepAliveNames">
-          <component :is="Component" v-show="!isIframePage" :key="state.refreshRouterViewKey" class="w100" />
+          <component :is="Component" v-show="!isIframePage" :key="state.refreshRouterViewKey" class="w-full" />
         </keep-alive>
       </transition>
     </router-view>
     <transition :name="setTransitionName" mode="out-in">
-      <Iframes v-show="isIframePage" class="w100" :refresh-key="state.iframeRefreshKey" :name="setTransitionName" :list="state.iframeList" />
+      <Iframes v-show="isIframePage" class="w-full" :refresh-key="state.iframeRefreshKey" :name="setTransitionName" :list="state.iframeList" />
     </transition>
   </div>
 </template>

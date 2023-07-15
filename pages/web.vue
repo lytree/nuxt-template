@@ -3,7 +3,7 @@ const online = useOnline()
 </script>
 
 <template>
-  <div>
+  <div class="h-full w-full">
     <NuxtLayout name="home">
       <NuxtPage />
     </NuxtLayout>

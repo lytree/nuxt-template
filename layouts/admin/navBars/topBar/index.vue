@@ -9,8 +9,6 @@ import mittBus from '@/utils/mitt'
 // 引入组件
 const Breadcrumb = defineAsyncComponent(() => import('@/layouts/admin/navBars/topBar/breadcrumb.vue'))
 const User = defineAsyncComponent(() => import('@/layouts/admin/navBars/topBar/user.vue'))
-const Logo = defineAsyncComponent(() => import('@/layouts/admin/logo/index.vue'))
-const Horizontal = defineAsyncComponent(() => import('@/layouts/admin/navMenu/horizontal.vue'))
 
 // 定义变量内容
 const stores = useRoutesList()
@@ -29,15 +27,10 @@ const setBreadcrumbStyle = computed(() => {
 })
 
 // 设置 logo 显示/隐藏
-const setIsShowLogo = computed(() => {
-  const { isShowLogo, layout } = themeConfig.value
-  return (isShowLogo && layout === 'classic') || (isShowLogo && layout === 'transverse')
-})
-// 设置是否显示横向导航菜单
-const isLayoutTransverse = computed(() => {
-  const { layout, isClassicSplitMenu } = themeConfig.value
-  return layout === 'transverse' || (isClassicSplitMenu && layout === 'classic')
-})
+// const setIsShowLogo = computed(() => {
+//   const { isShowLogo, layout } = themeConfig.value
+//   return (isShowLogo && layout === 'classic') || (isShowLogo && layout === 'transverse')
+// })
 // 设置/过滤路由（非静态路由/是否显示在菜单中）
 function setFilterRoutes() {
   const { layout, isClassicSplitMenu } = themeConfig.value
@@ -99,9 +92,7 @@ onUnmounted(() => {
 
 <template>
   <div class="layout-navbars-breadcrumb-index" :class="setBreadcrumbStyle">
-    <Logo v-if="setIsShowLogo" />
     <Breadcrumb />
-    <Horizontal v-if="isLayoutTransverse" :menu-list="state.menuList" />
     <User />
   </div>
 </template>

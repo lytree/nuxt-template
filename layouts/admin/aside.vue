@@ -170,10 +170,10 @@ watch(
 </script>
 
 <template>
-  <div v-show="!isTagsViewCurrenFull" class="h-100">
+  <div v-show="!isTagsViewCurrenFull" class="h-full">
     <el-aside class="layout-aside" :class="setCollapseStyle">
-      <Logo v-if="setShowLogo" />
-      <el-scrollbar ref="layoutAsideScrollbarRef" class="flex-auto" @mouseenter="onAsideEnterLeave(true)" @mouseleave="onAsideEnterLeave(false)">
+      <Logo />
+      <el-scrollbar ref="layoutAsideScrollbarRef" class="flex-auto overflow-hidden" @mouseenter="onAsideEnterLeave(true)" @mouseleave="onAsideEnterLeave(false)">
         <Vertical :menu-list="state.menuList" />
       </el-scrollbar>
     </el-aside>

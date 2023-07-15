@@ -86,7 +86,7 @@ defineExpose({
         >
           <template #prefix>
             <el-icon class="el-input__icon">
-              <ele-Search />
+              <!-- <ele-Search /> -->
             </el-icon>
           </template>
           <template #default="{ item }">
@@ -104,25 +104,23 @@ defineExpose({
 <style scoped>
 .layout-search-dialog {
   position: relative;
-  :deep(.el-dialog) {
-    .el-dialog__header,
-    .el-dialog__body {
-      display: none;
-    }
-    .el-dialog__footer {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: -53vh;
-      width: 100%;
-    }
-  }
-  :deep(.el-autocomplete) {
-    width: 560px;
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+}
+.layout-search-dialog :deep(.el-dialog) .el-dialog__header,
+.layout-search-dialog :deep(.el-dialog) .el-dialog__body {
+  display: none;
+}
+.layout-search-dialog :deep(.el-dialog) .el-dialog__footer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -53vh;
+  width: 100%;
+}
+.layout-search-dialog :deep(.el-autocomplete) {
+  width: 560px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 </style>
